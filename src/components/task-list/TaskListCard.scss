@@ -2,9 +2,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
   @include border-style;
-  padding: 1rem;
+  padding: 3rem;
+  min-width: 600px;
+  width: 100%;
+  background-color: var(--color-tertiary);
 }
 
 .task-item {
