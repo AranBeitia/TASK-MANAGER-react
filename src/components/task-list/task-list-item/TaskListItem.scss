@@ -1,8 +1,12 @@
 .list-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  @include border-style($radius: 0.5rem);
+  @include flexbox($justify: space-between, $align: center);
   padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
   background-color: var(--color-primary);
+  @include border-style($radius: 0.5rem);
+
+  &--is-done {
+    color: var(--color-secondary);
+    text-decoration: line-through;
+  }
 }

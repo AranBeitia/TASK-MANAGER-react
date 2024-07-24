@@ -6,11 +6,12 @@ const TaskListItem = () => {
   return (
     <div className='list-item'>
       <p>To study React fundamentals</p>
+      {/* <p className='list-item--is-done'>To study React fundamentals</p> */}
       <div>
-        <button>
+        <button className='action-button'>
           <MdCheck />
         </button>
-        <button>
+        <button className='action-button'>
           <MdDeleteOutline />
         </button>
       </div>
