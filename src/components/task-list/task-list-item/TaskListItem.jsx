@@ -2,11 +2,10 @@ import {MdCheck} from 'react-icons/md'
 import {MdDeleteOutline} from 'react-icons/md'
 import './TaskListItem.scss'
 
-const TaskListItem = () => {
+const TaskListItem = ({id, title, completed}) => {
   return (
-    <div className='list-item'>
-      <p>To study React fundamentals</p>
-      {/* <p className='list-item--is-done'>To study React fundamentals</p> */}
+    <div className='list-item' key={id}>
+      <p className={completed && 'list-item--is-done'}>{title}</p>
       <div>
         <button className='action-button'>
           <MdCheck />

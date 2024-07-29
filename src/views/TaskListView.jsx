@@ -1,10 +1,10 @@
 import SwitchButton from '../components/switch-button/SwitchButton'
-import TaskListCard from '../components/task-list/task-list-card/TaskListCard'
+import TaskListFrame from '../components/task-list/task-list-frame/TaskListFrame'
 
 const TaskListView = () => {
   return (
     <>
-      <TaskListCard />
+      <TaskListFrame />
       <SwitchButton />
     </>
   )
