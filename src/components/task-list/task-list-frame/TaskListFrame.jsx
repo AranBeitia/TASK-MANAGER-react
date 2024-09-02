@@ -13,34 +13,34 @@ const TaskListFrame = () => {
   }, [])
 
   return (
-    <>
-      <article className='task-card'>
-        <section className='task-card__input'>
-          <input
-            type='text'
-            placeholder='Add a new task'
-            className='input-task'
-          />
-          <button className='primary-button'>
-            <FaPlus />
-          </button>
-        </section>
-        <section className='task-card__list'>
+    <article className='task-card'>
+      <section className='task-card__input'>
+        <input
+          type='text'
+          placeholder='Add a new task'
+          className='input-task'
+        />
+        <button className='primary-button'>
+          <FaPlus />
+        </button>
+      </section>
+      <section className='task-card__list'>
+        <div className='task-card__inner'>
           <TaskListSection
             title='Tasks todo'
             tasks={tasks}
             filter={(task) => !task.completed}
           />
-        </section>
-        <section>
-          <TaskListSection
-            title='Done'
-            tasks={tasks}
-            filter={(task) => task.completed}
-          />
-        </section>
-      </article>
-    </>
+        </div>
+      </section>
+      <section>
+        <TaskListSection
+          title='Done'
+          tasks={tasks}
+          filter={(task) => task.completed}
+        />
+      </section>
+    </article>
   )
 }
 

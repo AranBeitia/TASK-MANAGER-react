@@ -5,6 +5,12 @@ const tasks = (state, action) => {
        ...state,
        tasks: action.payload,
      }
+    case 'DELETE_TASK':
+     return {
+       ...state,
+       tasks: state.tasks.filter((task) => task._id !== action.payload),
+     }
+
    default:
      return state
  }
