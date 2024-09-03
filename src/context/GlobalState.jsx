@@ -42,6 +42,18 @@ export const GlobalProvider = ({children}) => {
     }
   }
 
+  const createTask = async (task) => {
+    try {
+      const res = await axios.post(BASE_URL, task)
+      dispatch({
+        type: 'ADD_TASK',
+        payload: res.data.task,
+      })
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   return (
     <GlobalContext.Provider
       value={{
@@ -49,6 +61,7 @@ export const GlobalProvider = ({children}) => {
         getTasks,
         deleteTask,
         completeTask,
+        createTask,
       }}
     >
       {children}

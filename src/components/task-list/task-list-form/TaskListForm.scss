@@ -1,0 +1,14 @@
+.task-form {
+  @include flexbox($align: center, $justify: space-between);
+
+  &__input {
+    box-sizing: border-box;
+    display: block;
+    min-width: 200px;
+    width: 100%;
+    outline: 0;
+    padding: 0.5rem;
+    @include border-style($radius: 10px);
+    background: transparent;
+  }
+}
