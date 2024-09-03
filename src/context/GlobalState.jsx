@@ -30,12 +30,25 @@ export const GlobalProvider = ({children}) => {
     }
   }
 
+  const completeTask = async (id) => {
+    try {
+      await axios.put(`${BASE_URL}/complete/id/${id}`)
+      dispatch({
+        type: 'COMPLETE_TASK',
+        payload: id,
+      })
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   return (
     <GlobalContext.Provider
       value={{
         tasks: state.tasks,
         getTasks,
         deleteTask,
+        completeTask,
       }}
     >
       {children}
