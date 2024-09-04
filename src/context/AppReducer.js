@@ -15,6 +15,11 @@ const tasks = (state, action) => {
        ...state,
        tasks: state.tasks.map(task => task._id === action.payload ? {...task, completed: true} : task)
      }
+   case 'ADD_TASK':
+     return {
+       ...state,
+       tasks:[ ...state.tasks, action.payload]
+     }
    default:
      return state
  }

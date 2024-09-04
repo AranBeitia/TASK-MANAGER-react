@@ -10,6 +10,7 @@ const TaskListForm = () => {
 
   const addTask = (event) => {
     event.preventDefault()
+    createTask(task)
     console.log('addTask', task)
     setTask({title: ''})
   }
@@ -21,7 +22,7 @@ const TaskListForm = () => {
         placeholder='Add a new task'
         className='task-form__input'
         value={task.title}
-        onChange={(e) => setTask(e.target.value)}
+        onChange={(e) => setTask({title: e.target.value})}
       />
       <button className='primary-button'>
         <FaPlus />
