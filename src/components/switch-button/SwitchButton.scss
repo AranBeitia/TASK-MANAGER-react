@@ -43,13 +43,16 @@
 }
 
 input:checked + .switch-button__slider {
-  background-color: blue;
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-secondary);
 }
 
 input:focus + .switch-button__slider {
-  box-shadow: 0 0 1px blue;
+  box-shadow: 0 0 1px var(--color-primary);
 }
 
 input:checked + .switch-button__slider:before {
   transform: translateX(26px);
+  // border: 1px solid white;
+  background-color: var(--color-secondary);
 }
