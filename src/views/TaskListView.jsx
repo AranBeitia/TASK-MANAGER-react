@@ -3,7 +3,7 @@ import {GlobalContext} from '../context/GlobalState'
 import TaskListSection from '../components/task-list/task-list-section/TaskListSection'
 import TaskListForm from '../components/task-list/task-list-form/TaskListForm'
 import Loader from '../components/loader/Loader'
-import './TaskListView.scss'
+import TaskCard from './TaskListView.styles.js'
 
 const TaskListFrame = () => {
   const {tasks, getTasks} = useContext(GlobalContext)
@@ -19,7 +19,8 @@ const TaskListFrame = () => {
   }, [])
 
   return (
-    <article className='task-card'>
+    // <article className='task-card'>
+    <TaskCard>
       <TaskListForm />
       {!loading ? (
         <>
@@ -43,7 +44,7 @@ const TaskListFrame = () => {
       ) : (
         <Loader />
       )}
-    </article>
+    </TaskCard>
   )
 }
 

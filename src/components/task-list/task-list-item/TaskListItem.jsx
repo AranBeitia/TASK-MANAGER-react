@@ -2,7 +2,7 @@ import {useContext, useState} from 'react'
 import {GlobalContext} from '../../../context/GlobalState'
 import {MdCheck} from 'react-icons/md'
 import {MdDeleteOutline} from 'react-icons/md'
-import './TaskListItem.scss'
+import {ListItem} from './TaskListItem.styles.js'
 import Loader from '../../loader/Loader'
 
 const TaskListItem = ({id, title, completed}) => {
@@ -22,7 +22,7 @@ const TaskListItem = ({id, title, completed}) => {
   }
 
   return (
-    <div className='list-item' key={id}>
+    <ListItem key={id}>
       <p className={completed ? 'list-item--is-done' : ''}>{title}</p>
       <div>
         {!completed && !loading && (
@@ -38,7 +38,7 @@ const TaskListItem = ({id, title, completed}) => {
           <Loader />
         )}
       </div>
-    </div>
+    </ListItem>
   )
 }
 
