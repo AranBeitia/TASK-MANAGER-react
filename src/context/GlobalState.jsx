@@ -2,7 +2,8 @@ import {createContext, useReducer} from 'react'
 import AppReducer from './AppReducer'
 import axios from 'axios'
 
-const BASE_URL = 'https://task-manager-api-25rq.onrender.com/tasks'
+const BASE_URL = 'http://localhost:3000/tasks'
+// const BASE_URL = 'https://task-manager-api-25rq.onrender.com/tasks'
 const initialState = {
   tasks: [],
 }

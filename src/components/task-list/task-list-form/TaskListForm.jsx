@@ -2,7 +2,7 @@ import {useState, useContext} from 'react'
 import {GlobalContext} from '../../../context/GlobalState'
 import {FaPlus} from 'react-icons/fa6'
 import Loader from '../../loader/Loader'
-import './TaskListForm.scss'
+import {TaskForm, TaskInput, TaskButton} from './TaskListForm.styles.js'
 
 const TaskListForm = () => {
   const {createTask} = useContext(GlobalContext)
@@ -20,18 +20,17 @@ const TaskListForm = () => {
   return (
     <>
       {!loading ? (
-        <form className='task-form' onSubmit={addTask}>
-          <input
+        <TaskForm onSubmit={addTask}>
+          <TaskInput
             type='text'
             placeholder='Add a new task'
-            className='task-form__input'
             value={task.title}
             onChange={(e) => setTask({title: e.target.value})}
           />
-          <button className='primary-button'>
+          <TaskButton>
             <FaPlus />
-          </button>
-        </form>
+          </TaskButton>
+        </TaskForm>
       ) : (
         <Loader />
       )}

@@ -1,8 +1,9 @@
-# React + Vite
+# TASK MANAGER
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Design in figma
+[FIGMA](https://www.figma.com/design/hi912MxJlcRtFrOpqbVp0i/tasks-list?node-id=0-1&t=hOfLadcyjoXNd3cE-1)
 
-Currently, two official plugins are available:
+# API 
+[TASK-MANAGER-API](https://github.com/AranBeitia/TASK-MANAGER-API.git)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[RENDER SERVER](https://task-manager-api-25rq.onrender.com/tasks)
